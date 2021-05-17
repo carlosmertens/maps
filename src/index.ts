@@ -1,1 +1,5 @@
-console.log('Welcome to Maps');
+import { User } from './User';
+
+const user = new User();
+
+console.log(user);
