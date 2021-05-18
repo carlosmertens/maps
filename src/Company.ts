@@ -1,6 +1,7 @@
 import faker from 'faker';
 import { Pinpoint } from './CustomMap';
 
+// Use "implements" so TS can help us to fullfil the requirements
 export class Company implements Pinpoint {
   companyName: string;
   catchPhrase: string;

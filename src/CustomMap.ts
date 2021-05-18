@@ -12,6 +12,7 @@ export interface Pinpoint {
 }
 
 export class CustomMap {
+  // Google Maps methods are restricted from outside this class
   private googleMap: google.maps.Map;
 
   constructor(divId: string) {
