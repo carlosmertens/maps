@@ -5,6 +5,8 @@ interface Pinpoint {
     lat: number;
     lng: number;
   };
+
+  markerContent(): string;
 }
 
 export class CustomMap {
@@ -21,12 +23,20 @@ export class CustomMap {
   }
 
   addMarker(pinpoint: Pinpoint): void {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: pinpoint.location.lat,
         lng: pinpoint.location.lng,
       },
+    });
+
+    marker.addListener('click', () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: pinpoint.markerContent(),
+      });
+
+      infoWindow.open(this.googleMap, marker);
     });
   }
 }
