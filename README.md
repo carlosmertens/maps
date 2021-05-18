@@ -9,6 +9,7 @@ Randomly generate user and business and locate them (pin point) in a map
 - Typescript
 - Parcel bundler
 - Faker.js
+- Google Maps API
 
 ## Author
 
