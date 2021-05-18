@@ -1,7 +1,9 @@
 import faker from 'faker';
+import { Pinpoint } from './CustomMap';
 
-export class User {
+export class User implements Pinpoint {
   name: string;
+  color: 'blue';
   location: {
     lat: number;
     lng: number;

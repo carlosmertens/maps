@@ -1,12 +1,14 @@
 // "Instructions" to every other class on
 // how to be an argument to 'addMarker' method
-interface Pinpoint {
+export interface Pinpoint {
   location: {
     lat: number;
     lng: number;
   };
 
   markerContent(): string;
+
+  color: string;
 }
 
 export class CustomMap {

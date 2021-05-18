@@ -1,12 +1,14 @@
 import faker from 'faker';
+import { Pinpoint } from './CustomMap';
 
-export class Company {
+export class Company implements Pinpoint {
   companyName: string;
   catchPhrase: string;
   location: {
     lat: number;
     lng: number;
   };
+  color: 'red';
 
   constructor() {
     this.companyName = faker.company.companyName();
